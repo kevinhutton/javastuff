@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Hashtable;
 public class LinkedList {
 
     public static void main(String[] args)
@@ -74,12 +75,13 @@ public class LinkedList {
         }
     }
     public void removeDuplicates () { 
-        Hashtable table = new HashTable();
+        Hashtable table = new Hashtable();
         Node current   = firstNode;
         Node previous = null;
 
         while(current != null) { 
-            if (table.containsKey(current.Data)) { 
+            if (table.containsKey(current.data)) { 
+                System.out.println("removing dup");
                 previous.next = current.next ;
             }
             else { 
